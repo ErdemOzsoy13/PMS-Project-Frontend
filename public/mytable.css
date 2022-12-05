@@ -1,0 +1,113 @@
+#myTable_wrapper {
+  width: 100%;
+  overflow-y: hidden;
+}
+
+#myTable {
+  display: block;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+/* .dataTables_wrapper:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+} */
+
+td.details-control {
+  background: url("../resources/details_open.png") no-repeat center center;
+  cursor: pointer;
+  padding: 0 20px !important;
+}
+tr.details td.details-control {
+  background: url("../resources/details_close.png") no-repeat center center;
+}
+
+/* datatable row hover shading */
+.table-hover tbody tr:hover {
+  background-color: rgba(176, 190, 217, 0.3);
+}
+
+/* datatable row select shading */
+table.table tbody tr.selected > * {
+  box-shadow: inset 0 0 0 9999px rgb(13 110 253 / 0%);
+  background-color: #b0bed9;
+  color: inherit;
+}
+
+/* so that detail rows do not give react to hover shading */
+
+.table-hover tbody tr:hover:not([class]) {
+  background-color: #f3f5f9;
+}
+/* */
+
+/* detail rows background color */
+table.table tbody .odd + tr:not(.even) {
+  background-color: #f3f5f9;
+}
+table.table tbody .even + tr:not(.odd) {
+  background-color: #f3f5f9;
+}
+/* */
+
+.table-hover > tbody > tr:hover > * {
+  --bs-table-accent-bg: rgba(0, 0, 0, 0);
+  color: var(--bs-table-hover-color);
+}
+
+/* 
+Use this when use bootstrap 5.2.2 instead of 4.4.1
+
+.table-hover > tbody > tr > * {
+  --bs-table-accent-bg: rgba(0, 0, 0, 0);
+  color: var(--bs-table-hover-color);
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+  --bs-table-accent-bg: rgba(0, 0, 0, 0);
+  color: var(--bs-table-striped-color);
+} */
+
+table#myTable tbody tr table {
+  background-color: rgb(255, 255, 255);
+}
+
+table.table tbody th.focus,
+table.table tbody td.focus {
+  outline: none;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+  box-shadow: none;
+}
+
+.btn-info:hover {
+  color: #fff;
+  background-color: #138496;
+  border-color: #117a8b;
+}
+
+.toast {
+  /* background-color: #28a745; */
+  /* transition: background-color 1.5s;
+  -moz-transition: background-color 1.5s;
+  -webkit-transition: background-color 1.5s;
+  -o-transition: background-color 1.5s; */
+  color: #fff;
+  min-width: 300px;
+}
+
+.toast1 {
+  background-color: #17a2b8;
+}
+
+.toast2 {
+  background-color: #28a745;
+}
